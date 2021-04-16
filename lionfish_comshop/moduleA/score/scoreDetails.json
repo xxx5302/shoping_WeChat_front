@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "积分明细",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "i-auth": "../../components/auth/index",
+    "i-load-more": "../../components/load-more/index",
+    "i-card": "../../components/card/index"
+  }
+}

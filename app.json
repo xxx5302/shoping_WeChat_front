@@ -1,0 +1,212 @@
+{
+  "pages": [
+    "lionfish_comshop/pages/index/index",
+    "lionfish_comshop/pages/goods/goodsDetail",
+    "lionfish_comshop/pages/order/shopCart",
+    "lionfish_comshop/pages/user/me",
+    "lionfish_comshop/pages/position/community",
+    "lionfish_comshop/pages/position/search",
+    "lionfish_comshop/pages/order/index",
+    "lionfish_comshop/pages/order/order",
+    "lionfish_comshop/pages/order/refunddetail",
+    "lionfish_comshop/pages/user/protocol",
+    "lionfish_comshop/pages/user/articleProtocol",
+    "lionfish_comshop/pages/order/refund",
+    "lionfish_comshop/pages/order/evaluate",
+    "lionfish_comshop/pages/position/cities",
+    "lionfish_comshop/pages/order/placeOrder",
+    "lionfish_comshop/pages/goods/buyRecords",
+    "lionfish_comshop/pages/goods/comment",
+    "lionfish_comshop/pages/supply/recruit",
+    "lionfish_comshop/pages/supply/apply",
+    "lionfish_comshop/pages/web-view",
+    "lionfish_comshop/pages/order/goods_express",
+    "lionfish_comshop/pages/order/shareOrderInfo",
+    "lionfish_comshop/pages/user/coupon",
+    "lionfish_comshop/pages/index/share",
+    "lionfish_comshop/pages/type/index",
+    "lionfish_comshop/pages/user/rechargeDetails",
+    "lionfish_comshop/pages/user/charge",
+    "lionfish_comshop/pages/type/search",
+    "lionfish_comshop/pages/type/result",
+    "lionfish_comshop/pages/goods/industrial",
+    "lionfish_comshop/pages/supply/index",
+    "lionfish_comshop/pages/supply/home",
+    "lionfish_comshop/pages/refund/refundList",
+    "lionfish_comshop/pages/type/details",
+    "lionfish_comshop/pages/user/rule"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#fff"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "lionfish_comshop/pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "lionfish_comshop/pages/type/index",
+        "text": "分类"
+      },
+      {
+        "pagePath": "lionfish_comshop/pages/order/shopCart",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "lionfish_comshop/pages/user/me",
+        "text": "我的"
+      }
+    ],
+    "color": "#fff",
+    "selectedColor": "#fff",
+    "backgroundColor": "#fff",
+    "borderStyle": "white"
+  },
+  "networkTimeout": {
+    "request": 20000
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "为了更好的服务您，请授权允许"
+    }
+  },
+  "subPackages": [
+    {
+      "name": "distributionCenter",
+      "root": "lionfish_comshop/distributionCenter",
+      "pages": [
+        "pages/share",
+        "pages/member",
+        "pages/memberInfo",
+        "pages/details",
+        "pages/me",
+        "pages/recruit",
+        "pages/apply",
+        "pages/excharge",
+        "pages/exchargeRecord",
+        "pages/goodsDetails",
+        "pages/fans"
+      ]
+    },
+    {
+      "name": "moduleA",
+      "root": "lionfish_comshop/moduleA",
+      "pages": [
+        "special/index",
+        "special/list",
+        "pin/goodsDetail",
+        "pin/share",
+        "pin/me",
+        "pin/index",
+        "pin/income",
+        "pin/excharge",
+        "pin/exchargeRecord",
+        "vip/upgrade",
+        "score/signin",
+        "score/scoreDetails",
+        "menu/index",
+        "menu/fav",
+        "menu/subcate",
+        "menu/list",
+        "menu/details",
+        "seckill/list",
+        "solitaire/pub",
+        "solitaire/index",
+        "solitaire/details",
+        "video/index",
+        "video/detail",
+        "solitaire/me",
+        "solitaire/groupIndex",
+        "solitaire/addGood",
+        "solitaire/groupDetails",
+        "groupCenter/index",
+        "groupCenter/recruit",
+        "groupCenter/apply",
+        "groupCenter/communityMembers",
+        "groupCenter/distributionList",
+        "groupCenter/settlementList",
+        "groupCenter/settlementDetail",
+        "groupCenter/editInfo",
+        "groupCenter/groupList",
+        "groupCenter/groupDetail",
+        "groupCenter/buyHistory",
+        "groupCenter/pendingDeliveryOrders",
+        "groupCenter/wallet",
+        "groupCenter/cashList",
+        "groupCenter/detailsList",
+        "groupCenter/list",
+        "groupCenter/listDetails",
+        "groupCenter/memberList",
+        "groupCenter/setting",
+        "groupCenter/closure",
+        "groupCenter/addHexiao",
+        "groupCenter/bind_member_hexiao",
+        "groupCenter/goodsManage",
+        "groupCenter/gruopInfo",
+        "groupCenter/headlist",
+        "groupCenter/recommend",
+        "groupCenter/ranking",
+        "coupon/getCoupon"
+      ]
+    },
+    {
+      "name": "moduleB",
+      "root": "lionfish_comshop/moduleB",
+      "pages": [
+        "index/index",
+        "writeoff/index",
+        "index/auth",
+        "live/index",
+        "writeoff/member",
+        "rider/index",
+        "rider/order",
+        "rider/grab",
+        "supply/index",
+        "live/replay",
+        "supply/goodsManage",
+        "supply/orderManage",
+        "generalmall/index",
+        "supply/moneyManage",
+        "supply/excharge",
+        "supply/exchargeRecord",
+        "supply/orderDetails",
+        "supply/editSku",
+        "rider/census",
+        "rider/me",
+        "rider/excharge",
+        "rider/exchargeRecord",
+        "rider/accountRecord",
+        "writeoff/details",
+        "supply/changePrice",
+        "order/share"
+      ],
+      "plugins": {
+        "live-player-plugin": {
+          "version": "1.2.7",
+          "provider": "wx2b03c6e691cd7370"
+        }
+      }
+    }
+  ],
+  "preloadRule": {
+    "lionfish_comshop/pages/user/me": {
+      "network": "all",
+      "packages": [
+        "moduleA",
+        "distributionCenter",
+        "moduleB"
+      ]
+    }
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "i-vip-modal": "/lionfish_comshop/components/vipModal/index"
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ]
+}

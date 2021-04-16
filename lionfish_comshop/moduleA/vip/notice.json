@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "权益规则",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "parser":"../../components/parser/parser"
+  }
+}

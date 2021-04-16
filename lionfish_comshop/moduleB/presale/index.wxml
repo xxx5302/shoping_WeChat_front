@@ -1,0 +1,25 @@
+<!-- 幻灯片 -->
+<view class="swipe" wx:if="{{slider_list.length>0}}">
+  <swiper indicatorDots class="swiper-content" duration="400" autoplay indicatorActiveColor="#FF5344"
+    indicatorColor="#E7E9E7" interval="5000" circular>
+    <swiper-item wx:for="{{slider_list}}" wx:key="id">
+      <view class='banner' bindtap='goBannerUrl' data-idx="{{index}}">
+        <i-img iClass="banner-img" loadImage="{{item.image}}"></i-img>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
+
+<!--搜索框begin-->
+<form bindsubmit="goResult" style="display: block;width: 100%;">
+  <view class='search-bar'>
+    <view class='search-box'>
+      <input class='ipt' placeholder="搜索商品" confirm-type="搜索" type="text" name="keyword"></input>
+      <view class='search-icon'>
+        <text class="iconfont icon-sousuo1"></text>
+      </view>
+    </view>
+    <button class="search-btn" formType="submit" style="color:{{skin.color}}">搜索</button>
+  </view>
+</form>
+<!--搜索框end-->
