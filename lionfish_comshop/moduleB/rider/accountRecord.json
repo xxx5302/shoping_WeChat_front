@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "账户明细",
-  "navigationBarTextStyle": "black",
-  "usingComponents": {
-    "i-auth": "../../components/auth/index",
-    "i-load-more": "../../components/load-more/index",
-    "i-card": "../../components/card/index"
-  }
-}

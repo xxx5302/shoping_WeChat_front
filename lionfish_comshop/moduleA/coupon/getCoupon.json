@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "领券中心",
-  "usingComponents": {
-    "i-empty": "../../components/empty/index"
-  }
-}

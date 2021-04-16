@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "配送员中心",
-  "usingComponents": {
-    "i-fixed-bottom": "../../components/fixed-bottom/index"
-  }
-}

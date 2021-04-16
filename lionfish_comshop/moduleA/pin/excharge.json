@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "提现",
-  "navigationBarBackgroundColor": "#FFFFFF",
-  "navigationBarTextStyle": "black",
-  "usingComponents": {
-    "i-new-auth": "../../components/new-auth/index",
-    "parser":"../../components/parser/parser"
-  }
-}

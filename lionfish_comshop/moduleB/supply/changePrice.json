@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "订单改价",
-  "navigationBarBackgroundColor": "#FE8464",
-  "usingComponents": {
-    "i-input-number": "../../components/input-number/index",
-    "i-fixed-bottom": "../../components/fixed-bottom/index",
-    "i-img": "../../components/img/index"
-  }
-}

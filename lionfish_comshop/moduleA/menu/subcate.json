@@ -1,6 +1,0 @@
-{
-  "navigationBarBackgroundColor": "#FFFFFF",
-  "usingComponents": {
-    "i-img": "../../components/img/index"
-  }
-}

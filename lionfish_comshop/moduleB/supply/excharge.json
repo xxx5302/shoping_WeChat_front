@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "提现",
-  "usingComponents": {
-    "parser":"../../components/parser/parser"
-  }
-}

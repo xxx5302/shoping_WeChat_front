@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "到店核销",
-  "usingComponents": {
-    "i-modal": "../../components/modal/index"
-  }
-}

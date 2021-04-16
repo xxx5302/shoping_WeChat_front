@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "处理中订单",
-  "navigationBarBackgroundColor": "#FED206",
-  "enablePullDownRefresh": true,
-  "usingComponents": {
-    "i-load-more": "../../components/load-more/index",
-    "i-empty": "../../components/empty/index"
-  }
-}

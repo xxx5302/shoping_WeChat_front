@@ -1,3 +1,0 @@
-<view class="wrap">
-  <parser html="{{vipcard_buy_pagenotice}}" />
-</view>

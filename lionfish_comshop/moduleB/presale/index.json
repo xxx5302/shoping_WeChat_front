@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "预售中心",
-  "navigationBarTextStyle": "black",
-  "navigationBarBackgroundColor": "#FFFFFF",
-  "usingComponents": {
-    "i-img": "../../components/img/index"
-  }
-}

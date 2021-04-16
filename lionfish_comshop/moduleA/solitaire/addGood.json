@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "选择商品",
-  "navigationBarBackgroundColor": "#FFFFFF",
-  "usingComponents": {
-    "i-load-more": "../../components/load-more/index",
-    "i-empty": "../../components/empty/index",
-    "i-solitaire-good": "../components/solitaireGood"
-  }
-}
