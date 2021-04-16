@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "常见帮助",
+  "navigationBarTitleText": "点一点",
   "usingComponents": {
     "i-empty": "../../components/empty/index"
   }

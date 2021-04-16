@@ -19,16 +19,32 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    util.check_login() ? this.setData({ is_login: true }) : this.setData({ is_login: false });
+    this.getData();
+
+  },
+
+  getData: function(){
     status.setNavBgColor();
     var token = wx.getStorageSync('token');
     this.token = token;
     this.get_list();
+
   },
 
+  /**
+   * 授权成功回调
+   */
+  authSuccess: function () {
+    wx.reLaunch({
+      url: '/lionfish_comshop/pages/user/protocol',
+    })
+  },
   /**
    * 获取列表
    */
   get_list: function(){
+
     let that = this;
     wx.showLoading();
     app.util.request({

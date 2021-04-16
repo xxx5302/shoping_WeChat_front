@@ -1,0 +1,59 @@
+/* lionfish_comshop/moduleA/groupCenter/kuaiDiChaUser.wxss */
+.none-rush-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 140rpx;
+  padding-top: 140rpx;
+}
+.none-rush-list .img-block {
+  width: 240rpx;
+  height: 240rpx;
+  margin-bottom: 30rpx;
+}
+.none-rush-list .h1 {
+  font-size: 32rpx;
+  line-height: 32rpx;
+  color: #444;
+  margin-bottom: 20rpx;
+}
+
+.none-rush-list .h2 {
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #aaa;
+}
+.mb10 {
+  margin-bottom: 20rpx;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 30rpx;
+  color: #444;
+  font-size: 28rpx;
+  font-weight: 500;
+}
+.content {
+  padding: 20rpx 20rpx;
+  padding-bottom: 20rpx;
+}
+.content-wrap {
+  padding-bottom: 20rpx;
+}
+.content-wrap .item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+  padding: 16rpx 30rpx;
+  padding-bottom: 0;
+}
+.content-wrap .item .title {
+  color: #aaa;
+  min-width: 120rpx;
+}
+
+.content-wrap .item .detail {
+  color: #444;
+}

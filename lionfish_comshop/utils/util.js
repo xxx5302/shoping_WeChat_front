@@ -1,6 +1,6 @@
 function getdomain() {
+  console.log('【？？？】使用lionfish_comshop/utils/util.js/getdomain');
   var app = getApp();
-
   var new_domain = app.siteInfo.uniacid + '_' + app.siteInfo.siteroot;
 
   var api = new_domain;
@@ -8,11 +8,13 @@ function getdomain() {
 }
 
 function api() {
+  console.log('【？？？】使用lionfish_comshop/utils/util.js/api');
   var api = 'https://mall.shiziyu888.com/dan/';
   return api;
 }
 
 function check_login() {
+  console.log('【？？？】使用lionfish_comshop/utils/util.js/check_login');
   let token = wx.getStorageSync('token');
   let member_id = wx.getStorageSync('member_id');
 
@@ -28,6 +30,7 @@ function check_login() {
  * return promise [Boolean]
  */
 function check_login_new() {
+  console.log('【检查登录状态】使用lionfish_comshop/utils/util.js/check_login_new');
   let token = wx.getStorageSync('token');
   let member_id = wx.getStorageSync('member_id');
   return new Promise(function (resolve, reject) {
@@ -53,10 +56,11 @@ function check_login_new() {
  * return [Boolean]
  */
 function checkRedirectTo(url, needAuth) {
+  console.log('【检查跳转权限控制】使用lionfish_comshop/utils/util.js/checkRedirectTo');
   let status = false;
   if (needAuth) {
     const needAuthUrl = [
-      "/lionfish_comshop/moduleA/groupCenter/apply", 
+      "/lionfish_comshop/moduleA/groupCenter/apply",
       "/lionfish_comshop/pages/supply/apply",
       "/lionfish_comshop/pages/user/charge",
       "/lionfish_comshop/pages/order/index",
@@ -75,6 +79,8 @@ function checkRedirectTo(url, needAuth) {
  * type：跳转方式 0 redirectTo， 1 switchTab
  */
 function login(s_link, type = 0) {
+
+  console.log('【？？？】使用lionfish_comshop/utils/util.js/login');
   var app = getApp();
   var share_id = wx.getStorageSync('share_id');
   if (share_id == undefined) {
@@ -160,12 +166,13 @@ function login(s_link, type = 0) {
 }
 
 function login_prosime(needPosition=true) {
+
+  console.log('【？？？】使用lionfish_comshop/utils/util.js/login_prosime');
   return new Promise(function (resolve, reject) {
     getCode().then(token=>{
       wxGetUserInfo(needPosition, token).then(res=>{
         resolve(res)
       }).catch(res => {
-        console.log(res);
         reject(res)
       });
     })
@@ -173,12 +180,13 @@ function login_prosime(needPosition=true) {
 }
 
 function getCode() {
+
+  console.log('【？？？】使用lionfish_comshop/utils/util.js/getCode');
   return new Promise(function (resolve, reject) {
     var app = getApp();
     wx.login({
       success: function (res) {
         if (res.code) {
-          console.log(res.code);
           app.util.request({
             url: 'entry/wxapp/user',
             data: {
@@ -203,6 +211,7 @@ function getCode() {
 }
 
 function wxGetUserInfo(needPosition, token) {
+  console.log('【获取用户信息】使用lionfish_comshop/utils/util.js/wxGetUserInfo');
   return new Promise(function (resolve, reject) {
     var app = getApp();
     var share_id = wx.getStorageSync('share_id');
@@ -217,8 +226,8 @@ function wxGetUserInfo(needPosition, token) {
         wx.setStorage({
           key: "userInfo",
           data: userInfo
-        })
-        console.log(msg.userInfo);
+        }),
+
         app.util.request({
           url: 'entry/wxapp/user',
           data: {
@@ -281,25 +290,25 @@ function jsonToString(data) {
 
 function imageUtil(e) {
   var imageSize = {};
-  var originalWidth = e.detail.width; //图片原始宽  
-  var originalHeight = e.detail.height; //图片原始高  
-  var originalScale = originalHeight / originalWidth; //图片高宽比  
+  var originalWidth = e.detail.width; //图片原始宽
+  var originalHeight = e.detail.height; //图片原始高
+  var originalScale = originalHeight / originalWidth; //图片高宽比
 
-  //获取屏幕宽高  
+  //获取屏幕宽高
   wx.getSystemInfo({
     success: function(res) {
       var windowWidth = res.windowWidth;
       var windowHeight = res.windowHeight;
-      var windowscale = windowHeight / windowWidth; //屏幕高宽比  
+      var windowscale = windowHeight / windowWidth; //屏幕高宽比
 
       //console.log('windowWidth: ' + windowWidth)
       //console.log('windowHeight: ' + windowHeight)
-      if (originalScale < windowscale) { //图片高宽比小于屏幕高宽比  
-        //图片缩放后的宽为屏幕宽  
+      if (originalScale < windowscale) { //图片高宽比小于屏幕高宽比
+        //图片缩放后的宽为屏幕宽
         imageSize.imageWidth = windowWidth;
         imageSize.imageHeight = (windowWidth * originalHeight) / originalWidth;
-      } else { //图片高宽比大于屏幕高宽比  
-        //图片缩放后的高为屏幕高  
+      } else { //图片高宽比大于屏幕高宽比
+        //图片缩放后的高为屏幕高
         imageSize.imageHeight = windowHeight;
         imageSize.imageWidth = (windowHeight * originalWidth) / originalHeight;
       }
@@ -320,7 +329,16 @@ const formatTime = date => {
 
   return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
 }
+const formatTime2 = date => {
+  const year = date.getFullYear()
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+  const hour = date.getHours()
+  const minute = date.getMinutes()
+  const second = date.getSeconds()
 
+  return [year, month, day].map(formatNumber).join('-') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+}
 const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
@@ -328,6 +346,7 @@ const formatNumber = n => {
 
 //获取社区存本地
 const getCommunityInfo = function (param = {}) {
+  console.log('【获取社区存本地】使用lionfish_comshop/utils/util.js/getCommunityInfo');
   // let community = wx.getStorageSync('community');
   let app = getApp();
   // let that = this;
@@ -344,6 +363,7 @@ const getCommunityInfo = function (param = {}) {
         success: function (res) {
           if (res.data.code == 0) {
             let history_communities = res.data.list;
+            console.log(history_communities);
             if (Object.keys(history_communities).length > 0 || history_communities.communityId != 0){
               wx.setStorageSync('community', history_communities);
               app.globalData.community = history_communities;
@@ -381,6 +401,7 @@ const getCommunityInfo = function (param = {}) {
  * default_head_info： 自定义单社区信息
  */
 const getCommunityById = function (community_id){
+  console.log('【通过社区id获取社区信息】【方法：getCommunityById】--【uitls/utils.js】');
   return new Promise(function (resolve, reject) {
     getApp().util.request({
       url: 'entry/wxapp/index',
@@ -400,6 +421,7 @@ const getCommunityById = function (community_id){
  * 历史社区
  */
 const addhistory = function (community, isNew = false) {
+  console.log('【历史社区】使用lionfish_comshop/utils/util.js/addhistory');
   var community_id = community.communityId;
   console.log('addhistory');
   var token = wx.getStorageSync('token');
@@ -471,6 +493,7 @@ const wxCompareVersion = function (v1, v2) {
 }
 
 const addCart = function(option) {
+  console.log('【？？？】使用lionfish_comshop/utils/util.js/addCart');
   return new Promise((resolve, reject)=>{
     let token = wx.getStorageSync('token');
     getApp().util.request({
@@ -524,7 +547,7 @@ function throttle(fn, interval) {
     }
   };
 }
- 
+
 /*函数防抖*/
 function debounce(fn, interval) {
   var timer;
@@ -544,6 +567,7 @@ const fileSystem = wx.getFileSystemManager()
  * 缓存图片
  */
 const getStorageImage = (web_image) => {
+  console.log('【缓存图片】【方法：getStorageImage】--【uitls/utils.js】');
   return new Promise((resolve, reject)=>{
     let webImages = wx.getStorageSync('webImages') || []
     let webImage = webImages.find(y => y.web_path === web_image)
@@ -603,6 +627,7 @@ const getStorageImage = (web_image) => {
 
 module.exports = {
   formatTime: formatTime,
+  formatTime2: formatTime2,
   login: login,
   check_login: check_login,
   api: api,

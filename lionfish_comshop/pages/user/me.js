@@ -56,6 +56,9 @@ Page({
   },
 
   getMemberInfo: function() {
+
+
+
     var token = wx.getStorageSync('token');
     this.getCommunityInfo();
     let that = this;
@@ -110,14 +113,14 @@ Page({
             params.needAuth = true;
           }
 
-          let { 
-            is_supply, 
-            is_open_vipcard_buy, 
-            modify_vipcard_name, 
-            is_vip_card_member, 
-            modify_vipcard_logo, 
-            isopen_signinreward, 
-            show_signinreward_icon, 
+          let {
+            is_supply,
+            is_open_vipcard_buy,
+            modify_vipcard_name,
+            is_vip_card_member,
+            modify_vipcard_logo,
+            isopen_signinreward,
+            show_signinreward_icon,
             is_open_supplymobile,
             needAuth,
             show_user_tuan_mobile,
@@ -129,8 +132,8 @@ Page({
             member_info,
             is_supply: is_supply || 0,
             showGetPhone: showGetPhone,
-            is_open_vipcard_buy: is_open_vipcard_buy || 0, 
-            modify_vipcard_name: modify_vipcard_name || "会员", 
+            is_open_vipcard_buy: is_open_vipcard_buy || 0,
+            modify_vipcard_name: modify_vipcard_name || "会员",
             is_vip_card_member: is_vip_card_member || 0,
             modify_vipcard_logo,
             show_signinreward_icon,
@@ -200,6 +203,7 @@ Page({
             user_tool_icons,
             ishow_user_loginout_btn,
             commiss_diy_name,
+            commiss_add_name,
             supply_diy_name,
             user_service_switch,
             fetch_coder_type,
@@ -225,9 +229,10 @@ Page({
             h.community = default_head_info;
             wx.setStorageSync('community', default_head_info);
           }
-
+          commiss_add_name = commiss_add_name || '帮助文章';
           commiss_diy_name = commiss_diy_name || '分销';
           supply_diy_name = supply_diy_name || '供应商';
+          wcache.put('commiss_add_name', commiss_add_name);
           wcache.put('commiss_diy_name', commiss_diy_name);
           wcache.put('supply_diy_name', supply_diy_name);
 
@@ -240,6 +245,7 @@ Page({
             is_show_score,
             user_order_menu_icons: user_order_menu_icons || {},
             commiss_diy_name,
+            commiss_add_name,
             close_community_apply_enter: close_community_apply_enter || 0,
             user_tool_icons: user_tool_icons || {},
             ishow_user_loginout_btn: ishow_user_loginout_btn || 0,
@@ -347,7 +353,7 @@ Page({
     }
   },
 
-  /** 
+  /**
    * 预览图片
    */
   previewImage: function(e) {
@@ -395,7 +401,7 @@ Page({
     that.getCopyright();
     that.getMemberInfo();
   },
-  
+
   /**
    * 生命周期函数--监听页面隐藏
    */

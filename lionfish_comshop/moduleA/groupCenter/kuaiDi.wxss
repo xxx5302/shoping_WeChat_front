@@ -1,0 +1,177 @@
+page{
+  font-size: 32rpx;
+  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+
+/**kuaiDi.wxss**/
+.banner-add {
+  padding: 10px;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 540rpx;
+  background-color: #f8b62b;
+}
+
+.k-weui-media-box {
+  padding: 15px;
+  position: relative;
+}
+
+.k-weui-media-box:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1rpx solid #e5e5e5;
+  color: #e5e5e5;
+  left: 15px;
+}
+
+.k-weui-media-box:first-child:before {
+  display: none;
+}
+.k-weui-media-box:before{
+  border: none;
+}
+.k-weui-media-box__thumb {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+.k-weui-media-box_appmsg {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.k-weui-cell_active {
+  background-color: #ececec;
+}
+.k-weui-media-box__hd_in-appmsg {
+  margin-right: 0.8em;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.k-weui-media-box__bd_in-appmsg {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  min-width: 0;
+}
+.k-icon{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 40rpx;
+}
+.logo {
+  width: 270rpx;
+  height: 80rpx;
+}
+
+.but{
+  background-color:rgba(0, 0, 0, 0.1);
+  border-radius:56px;
+  width: 600rpx;
+  height: 110rpx;
+  margin: 54rpx auto 50rpx;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36rpx;
+  color:#ffffff;
+}
+
+.k-scan{
+  display: flex;
+  flex-direction: column;
+  color: #d99b16;
+
+}
+.k-scancode{
+  width: 120rpx;
+  height: 120rpx;
+  margin-bottom: 10rpx;
+}
+.shopping_guide{
+  width: 630rpx;
+  height:190rpx;
+  padding:20rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: #f2eeee;
+  margin: 20rpx auto;
+}
+.shopping_guide .shopping{
+  width: 200rpx;
+  height: 190rpx;
+  margin: 0 80rpx 0 30rpx;
+}
+
+.shopping_guide .bd{
+  display:inline-flex;
+  flex-direction: column;
+  height: 190rpx;
+  justify-content: center;
+  
+}
+.shopping_guide .bd .bd-hd{
+  font-size: 48rpx;
+  color: #54514a;
+  font-weight: bold;
+}
+.shopping_guide .bd .bd-bd{
+  color: #a8a296
+}
+.newslist{
+  padding:20rpx 40rpx;
+}
+.news .news-hd{
+  color: #f8b62b;
+  font-size: 30rpx;
+  padding-top: 10px;
+  padding-left: 40rpx;
+}
+.news .bd-hd{
+  width: 160rpx;
+  height: 160rpx;
+
+}
+.news .bd-bd{
+  
+  height: 160rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+ .news .bd-bd .title{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+  color: #000000;
+  font-size: 30rpx;
+
+}
+.news .bd-bd .desc{
+  color: #999;
+  font-size: 26rpx;
+}
+.news .bd-bd .desc .desc-hd{
+  margin-right: 20rpx;
+}
+
+.weui-media-box:before{
+  border: none;
+}

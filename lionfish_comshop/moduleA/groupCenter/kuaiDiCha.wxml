@@ -1,0 +1,62 @@
+<!--kuaiDi.wxml-->
+<!-- 包裹信息查询页面--客户输入单号页面 -->
+<view class="page">
+   <view class="userinfo">
+      <image src='../assets/index_logo.png' class='logo'></image>
+      <!--搜索框begin-->
+      <form bindsubmit="goResult">
+         <view class="but" bindtap="">
+            <!-- 通过bindinput绑定函数，实现input输入框输入实时同步data.inputValue值 -->
+            <input class='ipt' placeholder="输入单号获取包裹信息" confirm-type="搜索" type="text" name="keyword" bindinput="bindKeyInput" bindconfirm="searchPackage" confirm-type="search" adjust-position="{{ false }}"></input>
+            <!-- 事件绑定searchPackage函数wx.navigateTo跳转并携带参数 -->
+            <view class='k-icon'>
+               <text class="iconfont icon-sousuo1" bindtap="searchPackage"></text>
+            </view>
+         </view>
+      </form>
+      <view class="k-scan" bindtap="takePackage">
+         <image src="../assets/scancode.png" class="k-scancode"></image>
+         <text>扫码取件</text>
+      </view>
+   </view>
+  <!-- 临时开始 -->
+  <!-- <navigator>
+   <view class="shopping_guide"  >
+     <image src="../assets/shoppingguide.png" class="shopping"></image>
+     <view class="bd">
+        <text class="bd-hd">快递到店？</text>
+        <text class="bd-bd">随时查询 避免白跑</text>
+     </view>
+  </view>
+  </navigator> -->
+   <!-- 临时结束 -->
+   <!-- 测试 -->
+
+   <!-- 测试结束 -->
+
+   <view class='news'>
+      <!-- banner广告 -->
+      <view class="k-weui-media-box k-weui-media-box_appmsg newslist">
+         <ad unit-id="adunit-d9afea793cdbfb72"></ad>
+      </view>
+      <!-- <view class='news-hd'>
+         云店播报
+      </view>
+      <view class='news-bd'>
+
+         <navigator url="newdetail?id={{item.id}}" class="k-weui-media-box k-weui-media-box_appmsg newslist"
+            hover-class="k-weui-cell_active" wx:for="{{newsList}}" wx:for-index="idx" wx:for-item="item" wx:key="idx">
+            <view class="weui-media-box__hd k-weui-media-box__hd_in-appmsg bd-hd">
+               <image class="k-weui-media-box__thumb" src="{{item.images[0]}}" />
+            </view>
+            <view class="weui-media-box__bd k-weui-media-box__bd_in-appmsg bd-bd">
+               <view class="title">{{item.title}}</view>
+               <view class="desc">
+                  <text class="desc-hd">云店播报</text>
+                  <text class="desc-bd">{{item.create_time}}</text>
+               </view>
+            </view>
+         </navigator>
+      </view> -->
+   </view>
+</view>

@@ -157,6 +157,11 @@
           <text style="color:#fd7f02;">已到期,</text>立即续费
           <text class="iconfont icon-youjiantou goright"></text>
         </view>
+
+      </view>
+      <!--    流量主banner广告-->
+      <view style="margin-top: 30rpx;" >
+        <ad unit-id="adunit-d9afea793cdbfb72"></ad>
       </view>
     </view>
 
@@ -268,11 +273,13 @@
       </view>
       <image class='icon-right' src='../../images/rightArrowImg.png'></image>
     </navigator>
-
+   
     <!-- 猜你喜欢 -->
     <guess-like bind:openSku="openSku" iClass="guessLike" bind:changeCartNum="changeCartNum" bind:vipModal="vipModal" likeTitle="猜你喜欢" controller="goods.goods_guess_like" gid="{{goods_id}}" wx:if="{{goods_id&&loaded}}"></guess-like>
-
+    <!-- 流量主视频广告 -->
+    <!-- <ad unit-id="adunit-bdf3b76141f082c0" ad-type="video" ad-theme="white"></ad> -->
     <image class="sloganImg" src="{{index_bottom_image?index_bottom_image:'../../images/icon-index-slogan.png'}}"></image>
+ 
   </view>
 
   <!--底部按钮begin-->
@@ -409,10 +416,10 @@
 </view>
 
 
-<button class="fixed-share" bindtap='share_handler'>
-  <text class="iconfont icon-fenxiang"></text>
-  <view>分享</view>
-</button>
+<!--<button class="fixed-share" bindtap='share_handler'>-->
+<!--  <text class="iconfont icon-fenxiang"></text>-->
+<!--  <view>分享</view>-->
+<!--</button>-->
 <button class="fixed-service" openType="contact" wx:if="{{isShowContactBtn==1}}" send-message-title='{{share_title}}' send-message-img='{{goods.goods_share_image}}' send-message-path="'/lionfish_comshop/pages/goods/goodsDetail?id='+{{goods_id}}" show-message-card>
   <text class="iconfont icon-kefu"></text>
   <view>客服</view>

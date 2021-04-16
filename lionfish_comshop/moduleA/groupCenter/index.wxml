@@ -146,6 +146,12 @@
         </view>
       </view>
       <view class="record">
+        <navigator  hoverClass="none" url="/lionfish_comshop/moduleA/groupCenter/kuaiDi">
+          <view class="recordList">
+            <text class="recordListTit">包裹收录</text>
+            <image class="rightArrowImg" src="../../images/rightArrowImg.png"></image>
+          </view>
+        </navigator>
         <navigator hoverClass="none" url="/lionfish_comshop/moduleA/groupCenter/communityMembers" wx:if="{{isShow}}">
           <view class="recordList">
             <text class="recordListTit">{{groupInfo.group_name}}用户</text>

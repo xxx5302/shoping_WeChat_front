@@ -236,6 +236,23 @@
             </view>
           </view>
         </view>
+
+
+        <navigator url="/lionfish_comshop/pages/user/protocol">
+          <view class="item-main">
+            <view class="item-title">
+              <image class="toolIcon" mode="widthFix" src="{{user_tool_icons.i7?user_tool_icons.i7:'../../images/protocolIcon.png'}}"></image>
+              <!-- <text>看视频得奖励</text> -->
+              <text>{{commiss_add_name}}</text>
+            </view>
+            <view class="tool-right">
+              <image class="icon-right " src="../../images/rightArrowImg.png"></image>
+            </view>
+          </view>
+        </navigator>
+
+
+
         <view bindtap="goLink2" data-link="/lionfish_comshop/moduleA/solitaire/me" wx:if="{{is_open_solitaire==1}}">
           <view class="item-main">
             <view class="item-title">
@@ -391,23 +408,17 @@
             </view>
           </view>
         </block>
-        <!-- <view bindtap="goLink2" data-link="/lionfish_comshop/pages/user/coupon">
-          <view class="item-title">
-            <image class="toolIcon" mode="widthFix" src="{{user_tool_icons.i3?user_tool_icons.i3:'../../images/presale.png'}}"></image>
-            <text>预售中心</text>
-          </view>
-        </view> -->
-        <navigator url="/lionfish_comshop/pages/user/protocol">
-          <view class="item-main">
-            <view class="item-title">
-              <image class="toolIcon" mode="widthFix" src="{{user_tool_icons.i7?user_tool_icons.i7:'../../images/protocolIcon.png'}}"></image>
-              <text>常见帮助</text>
-            </view>
-            <view class="tool-right">
-              <image class="icon-right " src="../../images/rightArrowImg.png"></image>
-            </view>
-          </view>
-        </navigator>
+
+
+
+
+<!--        <view bindtap="goLink2" data-link="/lionfish_comshop/pages/user/coupon">-->
+<!--          <view class="item-title">-->
+<!--            <image class="toolIcon" mode="widthFix" src="{{user_tool_icons.i3?user_tool_icons.i3:'../../images/presale.png'}}"></image>-->
+<!--            <text>预售中心</text>-->
+<!--          </view>-->
+<!--        </view>-->
+
         <button class="item-fav" openType="contact" sessionFrom="sobot|{{userInfo.nickName}}|{{userInfo.avatarUrl}}" wx:if="{{user_service_switch!=0}}">
           <view class="item-main">
             <view class="item-title">
@@ -441,7 +452,10 @@
             </view>
           </view>
         </view>
+<!--        <ad unit-id="adunit-bdf3b76141f082c0" ad-type="video" ad-theme="white"></ad>-->
+
       </view>
+
     </view>
     <!-- 九宫格 -->
     <view class="tool" wx:if="{{user_tool_showtype==1}}">
@@ -573,6 +587,7 @@
           </view>
         </view>
       </view>
+
     </view>
     <view class="canvas-content" wx:if="{{fetch_coder_type==0}}">
       <view class="left">

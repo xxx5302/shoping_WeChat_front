@@ -15,7 +15,10 @@
         </view>
       </view>
     </view>
+
+
     <view class='list'>
+
       <view class="coupon {{item.is_over==1?'expired':''}} {{item.is_use==1?'used':''}}" wx:for="{{quan}}" wx:key="key" wx:if="{{quan.length}}">
         <view class='header'>
           <view class='price'>
@@ -42,7 +45,13 @@
         <image class='empty-img' src='../../images/noData.png'></image>
         <view class='empty-txt'>暂无任何记录～</view>
       </view>
+
       <i-load-more iClass="loadMore" loading="{{!isHideLoadMore}}" tip="{{loadText}}" wx:if="{{!isHideLoadMore}}"></i-load-more>
     </view>
+
   </view>
+
 </i-auth>
+
+<!-- <ad unit-id="adunit-d9afea793cdbfb72"></ad> -->
+<ad unit-id="adunit-fe491c0f40eb1f9b" ad-type="grid" grid-opacity="0.8" grid-count="5" ad-theme="white"></ad>

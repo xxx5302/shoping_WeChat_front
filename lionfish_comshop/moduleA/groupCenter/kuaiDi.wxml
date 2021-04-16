@@ -1,0 +1,51 @@
+<!--kuaiDi.wxml-->
+<!-- 包裹收录页--商家扫码录入包裹信息 -->
+<view class="page">
+  <view class="userinfo">
+      <image src='../assets/index_logo.png' class='logo'></image>
+      <view class="but" bindtap="controltap" >
+         <!-- <image src='../assets/location.png' class="k-icon"></image> -->
+         <text>请扫码录入包裹</text>
+      </view>
+      <view class="k-scan" bindtap="controltap">
+         <image src="../assets/scancode.png" class="k-scancode"></image>
+         <text>点我扫码</text>
+      </view>
+  </view>
+  <!-- 临时开始 -->
+  <navigator url="../../pages/index/index">
+   <view class="shopping_guide"  >
+     <image src="../assets/shoppingguide.png" class="shopping"></image>
+     <view class="bd">
+        <text class="bd-hd">录入管理</text>
+        <text class="bd-bd">简单三步 秒记包裹</text>
+     </view>
+  </view>
+  </navigator>
+   <!-- 临时结束 -->
+
+  <!-- 云店播报 -->
+  <view class='news'>
+      <view class="k-weui-media-box k-weui-media-box_appmsg newslist">
+         <ad unit-id="adunit-d9afea793cdbfb72"></ad>
+      </view>
+     <!-- <view class='news-hd' >
+        云店播报
+     </view>
+     <view class='news-bd'>
+           <navigator url="newdetail?id={{item.id}}" class="k-weui-media-box k-weui-media-box_appmsg newslist" hover-class="k-weui-cell_active" wx:for="{{newsList}}" wx:for-index="idx" wx:for-item="item" wx:key="idx">
+                    <view class="weui-media-box__hd k-weui-media-box__hd_in-appmsg bd-hd">
+                        <image class="k-weui-media-box__thumb" src="{{item.images[0]}}" />
+                    </view>
+                    <view class="weui-media-box__bd k-weui-media-box__bd_in-appmsg bd-bd">
+                        <view class="title">{{item.title}}</view>
+                        <view class="desc">
+                           <text class="desc-hd">云店播报</text>
+                           <text class="desc-bd">{{item.create_time}}</text>
+                        </view>
+                    </view>
+            </navigator>
+     </view> -->
+  </view>
+  <!-- 云店播报结束 -->
+</view>

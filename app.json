@@ -150,6 +150,9 @@
         "groupCenter/headlist",
         "groupCenter/recommend",
         "groupCenter/ranking",
+        "groupCenter/kuaiDi",
+        "groupCenter/kuaiDiCha",
+        "groupCenter/kuaiDiChaUser",
         "coupon/getCoupon"
       ]
     },
@@ -186,7 +189,7 @@
       ],
       "plugins": {
         "live-player-plugin": {
-          "version": "1.2.7",
+          "version": "1.2.10",
           "provider": "wx2b03c6e691cd7370"
         }
       }

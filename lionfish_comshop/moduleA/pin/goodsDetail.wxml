@@ -175,6 +175,7 @@
         </view>
       </view>
     </view>
+
     <view class="service">
       <view class="detailLogo">
         <text></text>
@@ -196,7 +197,8 @@
     </navigator>
     <image class="sloganImg" src="{{index_bottom_image?index_bottom_image:'../../images/icon-index-slogan.png'}}"></image>
   </view>
-
+  <!-- 流量主视频广告 -->
+  <ad unit-id="adunit-bdf3b76141f082c0" ad-type="video" ad-theme="white"></ad>
   <!--底部按钮begin-->
   <view class='i-fixed-bottom'>
     <view class="goods-bottom-bar">

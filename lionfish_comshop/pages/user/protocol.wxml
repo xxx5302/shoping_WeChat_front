@@ -1,7 +1,14 @@
-<view wx:if="{{list.length}}">
-    <navigator class="list-item" wx:for="{{list}}" wx:key="id" url="/lionfish_comshop/pages/user/articleProtocol?id={{item.id}}">
-        <span>{{item.title}}</span>
-        <image class="icon-right right-arrow" src="../../images/rightArrowImg.png"></image>
-    </navigator>
-</view>
-<i-empty wx:if="{{noData}}">暂无内容~</i-empty>
+<i-auth bind:authSuccess="authSuccess" needAuth="{{!is_login}}">
+    <view wx:if="{{list.length}}">
+        <!--    Banner广告-->
+        <ad unit-id="adunit-d9afea793cdbfb72"></ad>
+        <navigator class="list-item" wx:for="{{list}}" wx:key="id" url="/lionfish_comshop/pages/user/articleProtocol?id={{item.id}}">
+            <span>{{item.title}}</span>
+            <image class="icon-right right-arrow" src="../../images/rightArrowImg.png"></image>
+        </navigator>
+        <!--    流量主格子广告-->
+        <!-- <ad unit-id="adunit-fe491c0f40eb1f9b" ad-type="grid" grid-opacity="0.8" grid-count="5" ad-theme="white"></ad> -->
+
+    </view>
+    <i-empty wx:if="{{noData}}">暂无内容~</i-empty>
+</i-auth>
