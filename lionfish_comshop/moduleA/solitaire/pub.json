@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "群接龙",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "DateTimePicker": "../../components/datetimepicker/datetimepicker",
+    "chooseImage": "../../components/chooseImage/index",
+    "i-solitaire-good": "../components/solitaireGood",
+    "i-solitaire-head": "../components/solitaireHead"
+  }
+}

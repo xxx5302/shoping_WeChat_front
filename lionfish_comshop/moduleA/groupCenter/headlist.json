@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "团长列表",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "i-load-more": "../../components/load-more/index"
+  }
+}

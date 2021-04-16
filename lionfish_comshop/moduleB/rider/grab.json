@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "抢单",
+  "usingComponents": {
+    "i-fixed-bottom": "../../components/fixed-bottom/index",
+    "i-empty": "../../components/empty/index"
+  }
+}

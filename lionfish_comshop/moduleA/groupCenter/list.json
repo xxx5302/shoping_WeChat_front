@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#FFF",
+  "navigationBarTitleText": "配送单",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "i-auth": "../../components/auth/index",
+    "i-load-more": "../../components/load-more/index"
+  }
+}

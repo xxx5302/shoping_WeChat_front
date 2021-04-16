@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "i-fixed-bottom": "../../components/fixed-bottom/index"
+  }
+}
