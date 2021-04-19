@@ -4,13 +4,11 @@ var app = getApp();
 var communityData;
 var userInfo;
 var place;
-var items = ['地面','第1层','第2层','第3层','第4层','第5层'];
-import news from '../api/new';
+var items = ['第5层','第4层','第3层','第2层','第1层','地面'];
 
 Page({
 
   data: {
-    newsList: news || [] //新闻列表
   },
   //事件处理函数
   bindViewTap: function () {
@@ -51,58 +49,75 @@ Page({
         //获得二维码上面的信息
         const info = res.result;
         console.log('二维码信息：' + info);
+        //如果扫描返回数据小于10位，告警提示
+        if (info.length < 10) {
+          //手机震动告警
+          wx.vibrateLong({
+          })
+          wx.showToast({
+            title: '请重新扫描',
+            duration: 2000
+          })
 
-        wx.showActionSheet({
-          alertText:'单号：' + info,
-          itemList: items,//显示的列表项
-          success: function (res) {//res.tapIndex点击的列表项
-             console.log("点击了列表项：" + items[res.tapIndex])
-             place = items[res.tapIndex];
-          },
-          fail: function (res) { },
-          complete:function(res){ 
-            console.log(res);
-            if (res.errMsg === "showActionSheet:ok") {
-              //记录包裹二维码信息
-              app.util.request({
-                'url': 'entry/wxapp/index',
-                'data': {
-                  controller: 'kuaidi.save_package',
-                  packageCode: info,
-                  status: 1,
-                  headName: communityData.head_name,
-                  communityName: communityData.community_name,
-                  operator: userInfo.nickName,
-                  place: place
-                },
-                method: 'get',
-                dataType: 'json',
-                success: function (res) {
-                  //console.log(res)
-                  if (res.statusCode == 200) {
-                    //录入成功
-                    //console.log(res.data);
-                    wx.showToast({
-                      title: '录入成功',
-                      duration: 1000
-                    })
-                  } else {
-                    //录入失败，应该录入过
-                    //console.log('该单号已录入过')
-                    wx.showToast({
-                      title: '该包裹已录入过',
-                      duration: 1000
-                    })
-                    // todo
+        } else {
+          wx.showActionSheet({
+            alertText:'单号：' + info,
+            itemList: items,//显示的列表项
+            success: function (res) {//res.tapIndex点击的列表项
+               console.log("点击了列表项：" + items[res.tapIndex])
+               place = items[res.tapIndex];
+            },
+            fail: function (res) { },
+            complete:function(res){ 
+              console.log(res);
+              if (res.errMsg === "showActionSheet:ok") {
+                //记录包裹二维码信息
+                app.util.request({
+                  'url': 'entry/wxapp/index',
+                  'data': {
+                    controller: 'kuaidi.save_package',
+                    packageCode: info,
+                    status: 1,
+                    headName: communityData.head_name,
+                    communityName: communityData.community_name,
+                    operator: userInfo.nickName,
+                    place: place
+                  },
+                  method: 'get',
+                  dataType: 'json',
+                  success: function (res) {
+                    //console.log(res)
+                    if (res.statusCode == 200) {
+                      //录入成功
+                      //console.log(res.data);
+                      wx.showToast({
+                        title: '录入成功',
+                        duration: 1000
+                      })
+                    } else {
+                      //录入失败，应该录入过
+                      //console.log('该单号已录入过')
+                      //手机震动告警
+                      wx.vibrateLong({
+                      })
+                      wx.showToast({
+                        title: '该包裹已录入过',
+                        duration: 2000
+                      })
+                      // todo
+                    }
                   }
-                }
-              })
-            } else {
+                })
+              } else {
+                
+              }
               
             }
-            
-          }
-       })
+         })
+        }
+
+
+        
 
 
 

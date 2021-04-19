@@ -7,7 +7,9 @@
       <form bindsubmit="goResult">
          <view class="but" bindtap="">
             <!-- 通过bindinput绑定函数，实现input输入框输入实时同步data.inputValue值 -->
-            <input class='ipt' placeholder="输入单号获取包裹信息" confirm-type="搜索" type="text" name="keyword" bindinput="bindKeyInput" bindconfirm="searchPackage" confirm-type="search" adjust-position="{{ false }}"></input>
+            <input class='ipt' placeholder="输入单号获取包裹信息" confirm-type="搜索" type="text" name="keyword"
+               bindinput="bindKeyInput" bindconfirm="searchPackage" confirm-type="search"
+               adjust-position="{{ false }}"></input>
             <!-- 事件绑定searchPackage函数wx.navigateTo跳转并携带参数 -->
             <view class='k-icon'>
                <text class="iconfont icon-sousuo1" bindtap="searchPackage"></text>
@@ -19,16 +21,16 @@
          <text>扫码取件</text>
       </view>
    </view>
-  <!-- 临时开始 -->
-  <!-- <navigator>
-   <view class="shopping_guide"  >
-     <image src="../assets/shoppingguide.png" class="shopping"></image>
-     <view class="bd">
-        <text class="bd-hd">快递到店？</text>
-        <text class="bd-bd">随时查询 避免白跑</text>
-     </view>
-  </view>
-  </navigator> -->
+   <!-- 临时开始 -->
+   <navigator>
+      <view class="shopping_guide">
+         <image src="../assets/shoppingguide.png" class="shopping"></image>
+         <view class="bd">
+            <text class="bd-hd">快递到店？</text>
+            <text class="bd-bd">随时查询 避免白跑</text>
+         </view>
+      </view>
+   </navigator>
    <!-- 临时结束 -->
    <!-- 测试 -->
 
