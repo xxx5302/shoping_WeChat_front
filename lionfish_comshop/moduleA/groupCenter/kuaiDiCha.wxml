@@ -39,7 +39,8 @@
    <view class='news'>
       <!-- banner广告 -->
       <view class="k-weui-media-box k-weui-media-box_appmsg newslist">
-         <ad unit-id="adunit-d9afea793cdbfb72"></ad>
+         <ad unit-id="adunit-d9afea793cdbfb72" ad-type="" ad-theme=""></ad>
+         <!-- <ad unit-id="adunit-bdf3b76141f082c0" ad-type="video" ad-theme="white"></ad> -->
       </view>
       <!-- <view class='news-hd'>
          云店播报

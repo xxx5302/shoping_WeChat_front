@@ -161,7 +161,7 @@
       </view>
       <!--    流量主banner广告-->
       <view style="margin-top: 30rpx;" >
-        <ad unit-id="adunit-d9afea793cdbfb72"></ad>
+        <ad unit-id="adunit-bdf3b76141f082c0" ad-type="video" ad-theme="white"></ad>
       </view>
     </view>
 
