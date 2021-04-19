@@ -82,13 +82,9 @@ Page({
                     //手机震动告警
                     wx.vibrateLong({
                     })
-                    // //播放声音
-                    // const innerAudioContext = wx.createInnerAudioContext();//新建一个createInnerAudioContext();
-                    // innerAudioContext.autoplay = true;//音频自动播放设置
-                    // innerAudioContext.src = '../assets/classic.mp3';//链接到音频的地址
-                    // innerAudioContext.onPlay(() => {});//播放音效
                     //消息框告警
                     wx.showToast({
+                      icon:'error',
                       title: '取件登记失败',
                       duration: 3000
                     })
@@ -107,6 +103,15 @@ Page({
       },
       fail: (res) => {
         console.log('扫码失败')
+        //手机震动告警
+        wx.vibrateLong({
+        })
+        //消息框告警
+        wx.showToast({
+          icon:'error',
+          title: '取件登记失败',
+          duration: 3000
+        })
       }
     })
   }
